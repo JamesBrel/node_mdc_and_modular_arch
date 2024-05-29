@@ -1,0 +1,7 @@
+{
+    
+    "name": "name_of_app",
+    "entryPoints": ["./lib/**/*.ts"],
+    "out": "docs"
+    
+}

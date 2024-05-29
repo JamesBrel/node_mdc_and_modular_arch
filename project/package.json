@@ -1,0 +1,94 @@
+{
+  "name": "name_of_app",
+  "version": "1.0.0",
+  "description": "description",
+  "type": "module",
+  "engines": {
+    "node": "v18.20.1"
+
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "format-check": "prettier --check ./lib",
+    "format-fix": "prettier --write ./lib",
+    "lint-check": "eslint ./lib",
+    "lint-fix": "eslint --fix",
+    "clean-b": "rm -r ./build",
+    "build": "tsc",
+    "build-w": "tsc -w",
+    
+    "dev": "NODE_ENV=dev nodemon ./build/index.js",
+    "staging": "NODE_ENV=staging node ./build/index.js",
+    
+    "start-prod": "pm2 start ecosystem.config.cjs --env production",
+    "stop-prod": "pm2 stop ecosystem.config.cjs",
+    "delete-prod": "pm2 delete ecosystem.config.cjs",
+    "restart-prod": "pm2 restart ecosystem.config.cjs",
+    
+    "test-dev": "NODE_ENV=dev -- jest --verbose",
+    "test-stag": "NODE_ENV=staging -- jest --verbose",
+    "test-auto": "NODE_ENV=dev -- jest --watchAll --verbose",
+    "test-coverage": "NODE_ENV=dev -- jest --coverage --verbose --forceExit",
+    "docs": "typedoc",
+    "clean-docs": "rm -r ./docs",
+    "clean-uploads": "rm -r ./uploads"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "express",
+    "inversify",
+    "inversify-express-utils", 
+    "mongodb",
+    "sql"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+url"
+  },
+  "author": {
+    "name": "author_name"
+  },
+  "license": "MIT",
+  
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/types": "^7.23.9",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.11.7",
+    "@types/supertest": "^6.0.2",
+    "babel-jest": "^29.7.0",
+    "chalk": "^5.3.0",
+    "concurrently": "^8.2.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.4",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.7",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "http-status": "^1.7.3",
+    "inversify": "^6.0.2",
+    "inversify-express-utils": "^6.4.6",
+    "inversify-socket-utils": "^1.0.1003",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "reflect-metadata": "^0.2.1"
+  }
+}

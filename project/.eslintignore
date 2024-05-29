@@ -1,0 +1,11 @@
+trash/*
+build/*
+node_modules
+.eslintrc
+.prettierrc
+.gitignore
+.jest.config.json
+.tsconfig.json
+.nodemon.json
+package.json
+package-lock.json

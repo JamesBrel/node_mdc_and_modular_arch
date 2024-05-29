@@ -1,0 +1,13 @@
+{
+    "watch": [
+        "./build/*"
+    ],
+    "ignore": [
+        "./node_modules/",
+        "./lib/*",
+        "./test/*"
+    ],
+    "ext": "js,json",
+    "verbose": true,
+    "restartable": "rs"
+}
