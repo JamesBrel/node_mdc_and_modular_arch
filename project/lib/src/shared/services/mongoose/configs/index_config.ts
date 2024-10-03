@@ -1,4 +1,3 @@
-
 class IndexConfig {
   /**
    * createIndex
@@ -8,5 +7,4 @@ class IndexConfig {
   }
 }
 
-export { IndexConfig };
-
+export {IndexConfig};

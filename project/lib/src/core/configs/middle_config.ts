@@ -1,6 +1,6 @@
 import bodyParser from "body-parser";
 import cors from "cors";
-import express, { Application } from "express";
+import express, {Application} from "express";
 import morgan from "morgan";
 
 class MiddleConfig {
@@ -16,8 +16,9 @@ class MiddleConfig {
     _app.use(bodyParser.urlencoded({extended: true}));
     _app.use(bodyParser.json());
     _app.use(morgan("dev"));
+    _app.disable("etag");
+
     _app.use("/uploads", express.static("uploads"));
   }
 }
-export { MiddleConfig };
-
+export {MiddleConfig};

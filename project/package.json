@@ -4,7 +4,7 @@
   "description": "description",
   "type": "module",
   "engines": {
-    "node": "v18.20.1"
+    "node": "vxx.xx.x"
 
   },
   "main": "./build/index.js",

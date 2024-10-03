@@ -22,7 +22,7 @@ class ServerConfig {
       let _appServer = _httpServer.build().listen(_port, () => {
         Logger.info(
           "Http Server",
-          `---- ${app}'s Server is running on ${_host}:${_port} 🔥 -----`
+          `---- ${app}'s Server is running on ${_host}:${_port}/ 🔥 -----`
         );
       });
       return _appServer;

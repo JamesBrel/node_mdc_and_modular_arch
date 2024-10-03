@@ -1,3 +1,3 @@
-const app = "name_of_app";
+const app = "testApp";
 
 export {app};

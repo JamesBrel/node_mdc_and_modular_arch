@@ -1,6 +1,6 @@
 import {injectable} from "inversify";
-import {Success} from "../../../../../../shared/results/result_success.js";
-import {Result} from "../../../../../../shared/results/type.js";
+import {Success} from "../../../../../shared/results/result_success.js";
+import {Result} from "../../../../../shared/results/type.js";
 import {IHelloWorld} from "../interfaces/hello_to_world_inter.js";
 
 /**
@@ -20,8 +20,8 @@ class HelloWorldImpl implements IHelloWorld {
    * @return {data_type} Describe the return
    */
 
-  public async sayTheHelloWorld(): Promise<Result<string, undefined>> {
-    return await Success.result("Hello World !");
+  public sayTheHelloWorld(): Result<string, undefined> {
+    return Success.result("Hello World !");
   }
 }
 
