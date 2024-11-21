@@ -6,6 +6,9 @@
 ### Added
 - I add the typeORM service to manage the SQL Database
 
+### Changed
+- I update the dev env with the mysql configuration as example
+
 
 ## [2.0.0 => Update for Folder Structure] - 2024-10-03
 ### Changed
