@@ -51,7 +51,7 @@
   },
   "license": "MIT",
   
-  "devDependencies": {
+"devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/types": "^7.23.9",
     "@types/bcrypt": "^5.0.2",
@@ -89,6 +89,8 @@
     "mongoose": "^8.2.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
-    "reflect-metadata": "^0.2.1"
+    "mysql2": "^3.11.4",
+    "reflect-metadata": "^0.2.1",
+    "typeorm": "^0.3.20"
   }
 }

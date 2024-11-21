@@ -89,8 +89,8 @@ class MongooseGetRequest {
       });
   }
 
-  public static async fetchAllByFilter<Type>(
-    _model: Model<Type>,
+  public static async fetchAllByFilter<T>(
+    _model: Model<T>,
     _properties: {},
     _populatePaths?: string
   ): Promise<{status: boolean; message: string; data?: any}> {

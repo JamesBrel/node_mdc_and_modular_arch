@@ -13,8 +13,8 @@ class ServerConfig {
    */
   public static async httpServer() {
     try {
-      let _host = process.env.HOST;
-      let _port = process.env.PORT;
+      let _host = process.env.SERVER_HOST;
+      let _port = process.env.SERVER_PORT;
       let _httpServer = new InversifyExpressServer(httpContainer);
       _httpServer.setConfig((app: Application) => {
         MiddleConfig.middle(app);

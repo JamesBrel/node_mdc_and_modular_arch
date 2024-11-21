@@ -3,7 +3,8 @@ import path from "path";
 import "reflect-metadata";
 
 import {fileURLToPath} from "url";
-import {MongooseConfig} from "../shared/services/mongoose/configs/mongoose_config.js";
+import {OrmConfig} from "../shared/services/sql/configs/orm_config.js";
+import {SqlConfig} from "../shared/services/sql/configs/sql_config.js";
 import {ServerConfig} from "./configs/server_config.js";
 
 class Init {
@@ -15,7 +16,8 @@ class Init {
 
     //* HttpServer
     ServerConfig.httpServer().then((_server) => {
-      MongooseConfig.mongoose();
+      // MongooseConfig.mongoose();
+      OrmConfig.init(SqlConfig.mysql());
     });
   }
 }

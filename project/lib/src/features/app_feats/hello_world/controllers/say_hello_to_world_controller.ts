@@ -16,7 +16,7 @@ class SayHelloToWorldController {
     let _result = this._iHelloWorld.sayTheHelloWorld();
     if (_result instanceof Success) {
       _res.status(httpStatus.OK).json({
-        message: "system greet successfully",
+        message: "Request Success",
         data: _result.data
       });
     }
