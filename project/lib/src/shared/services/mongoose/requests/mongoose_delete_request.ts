@@ -4,14 +4,13 @@ class MongooseDeleteRequest {
   public static async deleteOneById<T>(
     _model: Model<T>,
     _id: string
-  ): Promise<{status: boolean; message: string; data?}> {
+  ): Promise<{status: boolean; message: string}> {
     return await _model
       .findByIdAndDelete(_id)
-      .then((data) => {
+      .then((_) => {
         return {
           status: true,
-          message: "Deletion Success",
-          data
+          message: "Deletion Success"
         };
       })
       .catch((_error: any) => {

@@ -2,6 +2,17 @@
 
 *Changelog created using the [Simple Changelog](https://marketplace.visualstudio.com/items?itemName=tobiaswaelde.vscode-simple-changelog) extension for VS Code.*
 
+## [2.3.0 => Add a model user and some correction of design patern] - 2025-02-02
+### Added
+- Add a model user like example
+
+### Changed
+- Change the 'impl' file to 'Data' and connect it directly in the controller file.
+
+### Removed
+- Remove the interface file
+
+
 ## [2.2.0 => Add the .nvmrc file] - 2024-12-05
 ### Added
 - i add the .nvmrc file , to specify the node js version of the project

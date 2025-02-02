@@ -4,21 +4,19 @@ import {inject} from "inversify";
 import {controller, httpGet, request, response} from "inversify-express-utils";
 import {hello_api} from "../../../../shared/constants/api_const.js";
 import {Success} from "../../../../shared/results/result_success.js";
-import {HelloWorldImpl} from "../data/impls/hello_to_world_impl.js";
-import {IHelloWorld} from "../data/interfaces/hello_to_world_inter.js";
+import {HelloWorldData} from "../data/hello_to_world_data.js";
 
 @controller(hello_api)
 class SayHelloToWorldController {
-  constructor(@inject(HelloWorldImpl) private _iHelloWorld: IHelloWorld) {}
+  constructor(
+    @inject(HelloWorldData) private _helloWorldData: HelloWorldData
+  ) {}
 
-  @httpGet("/v1/")
+  @httpGet("/")
   public getHelloWorld(@request() _req: Request, @response() _res: Response) {
-    let _result = this._iHelloWorld.sayTheHelloWorld();
+    let _result = this._helloWorldData.sayTheHelloWorld();
     if (_result instanceof Success) {
-      _res.status(httpStatus.OK).json({
-        message: "Request Success",
-        data: _result.data
-      });
+      _res.status(httpStatus.OK).json(_result.data);
     }
   }
 }

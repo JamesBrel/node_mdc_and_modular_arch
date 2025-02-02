@@ -45,21 +45,15 @@
  ┃ ┃ ┃ ┃ ┃ ┣ 📂controllers
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜say_hello_to_world_controller.ts
  ┃ ┃ ┃ ┃ ┃ ┣ 📂data
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂impls
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜hello_to_world_impl.ts
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂interfaces
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜hello_to_world_inter.ts
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜hello_to_world_data.ts
  ┃ ┃ ┃ ┃ ┃ ┗ 📂models
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜user_model.ts
  ┃ ┃ ┃ ┗ 📂skeleton_feats
  ┃ ┃ ┃ ┃ ┗ 📂feature_name
  ┃ ┃ ┃ ┃ ┃ ┣ 📂controllers
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
  ┃ ┃ ┃ ┃ ┃ ┣ 📂data
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂impls
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂interfaces
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
  ┃ ┃ ┃ ┃ ┃ ┗ 📂models
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
  ┃ ┃ ┗ 📂shared
@@ -83,6 +77,10 @@
  ┃ ┃ ┃ ┃ ┣ 📜result_success.ts
  ┃ ┃ ┃ ┃ ┗ 📜type.ts
  ┃ ┃ ┃ ┗ 📂services
+ ┃ ┃ ┃ ┃ ┣ 📂cron_jobs
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂configs
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂requests
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.gitkeep
  ┃ ┃ ┃ ┃ ┣ 📂jwt
  ┃ ┃ ┃ ┃ ┃ ┗ 📂requests
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜create_token_request.ts
@@ -121,6 +119,7 @@
  ┣ 📜.eslintignore
  ┣ 📜.eslintrc
  ┣ 📜.gitignore
+ ┣ 📜.nvmrc
  ┣ 📜.prettierignore
  ┣ 📜.prettierrc
  ┣ 📜babel.config.json
@@ -149,4 +148,4 @@ After downloading or cloning the Git Repository
   3. and type ***npm install*** to install all packages of Dependencies and Dev_Dependencies 
 
 ---
-<p style="text-align: center"> Copyright &copy; 2024 James Brel All Rights Reserved</p>
+<p style="text-align: center"> Copyright &copy; 2025 James Brel All Rights Reserved</p>

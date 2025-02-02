@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import path from "path";
 import "reflect-metadata";
 
+// import cron from "node-cron";
 import {fileURLToPath} from "url";
 import {OrmConfig} from "../shared/services/sql/configs/orm_config.js";
 import {SqlConfig} from "../shared/services/sql/configs/sql_config.js";
@@ -19,6 +20,14 @@ class Init {
       // MongooseConfig.mongoose();
       OrmConfig.init(SqlConfig.mysql());
     });
+
+    // todo:  je vais y revenir plutard
+
+    // cron.schedule("* * * * *", () => {
+    //   console.log(`[${new Date().toISOString()}] Cron job exécuté.`);
+    // });
+
+    // console.log("Cron job démarré !");
   }
 }
 

@@ -1,4 +1,3 @@
-const app = "Name of Server";
+const app = "testApp";
 
-export { app };
-
+export {app};

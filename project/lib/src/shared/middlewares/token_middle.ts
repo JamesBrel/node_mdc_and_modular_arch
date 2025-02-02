@@ -17,27 +17,19 @@ const verifyTokenMiddle = (
   let authToken = _req.header("Authorization");
 
   if (!authToken) {
-    _res
-      .status(httpStatus.NOT_FOUND)
-      .json({message: "You are not authenticated !"});
+    _res.status(httpStatus.NOT_FOUND).json("You are not authenticated !");
   } else if (!authToken.startsWith("Bearer")) {
-    _res
-      .status(httpStatus.BAD_REQUEST)
-      .json({message: "You are not authenticated !"});
+    _res.status(httpStatus.BAD_REQUEST).json("You are not authenticated !");
   } else if (!authToken.split(" ")[1]) {
-    _res
-      .status(httpStatus.NOT_FOUND)
-      .json({message: "You are not authenticated !"});
+    _res.status(httpStatus.NOT_FOUND).json("You are not authenticated !");
   } else {
     const token = authToken.split(" ")[1];
     let _tokenVerified = VerifyTokenRequest.verifyToken(token);
-    if (_tokenVerified.status) {
+    if (_tokenVerified != null) {
       // @ts-ignore
       _req.tokenData = _tokenVerified.data;
     } else {
-      _res
-        .status(httpStatus.NOT_ACCEPTABLE)
-        .json({message: "Token is not valid !"});
+      _res.status(httpStatus.NOT_ACCEPTABLE).json("Token is not valid !");
     }
   }
   _next();

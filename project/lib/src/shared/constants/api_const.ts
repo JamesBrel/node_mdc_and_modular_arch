@@ -1,3 +1,3 @@
-const hello_api = "/api/hello-world";
+const hello_api = "/api/hello";
 
 export {hello_api};

@@ -1,5 +1,5 @@
 {
-  "name": "name_of_app",
+  "name": "testapp",
   "version": "1.0.0",
   "description": "description",
   "type": "module",
@@ -12,15 +12,12 @@
     "clean-b": "rm -r ./build",
     "build": "tsc",
     "build-w": "tsc -w",
-    
     "dev": "NODE_ENV=dev nodemon ./build/index.js",
     "staging": "NODE_ENV=staging node ./build/index.js",
-    
     "start-prod": "pm2 start ecosystem.config.cjs --env production",
     "stop-prod": "pm2 stop ecosystem.config.cjs",
     "delete-prod": "pm2 delete ecosystem.config.cjs",
     "restart-prod": "pm2 restart ecosystem.config.cjs",
-    
     "test-dev": "NODE_ENV=dev -- jest --verbose",
     "test-stag": "NODE_ENV=staging -- jest --verbose",
     "test-auto": "NODE_ENV=dev -- jest --watchAll --verbose",
@@ -34,7 +31,7 @@
     "typescript",
     "express",
     "inversify",
-    "inversify-express-utils", 
+    "inversify-express-utils",
     "mongodb",
     "sql"
   ],
@@ -43,11 +40,10 @@
     "url": "git+url"
   },
   "author": {
-    "name": "author_name"
+    "name": "thecoder"
   },
   "license": "MIT",
-  
-"devDependencies": {
+  "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/types": "^7.23.9",
     "@types/bcrypt": "^5.0.2",
@@ -56,6 +52,7 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/multer": "^1.4.11",
     "@types/node": "^20.11.7",
+    "@types/node-cron": "^3.0.11",
     "@types/supertest": "^6.0.2",
     "babel-jest": "^29.7.0",
     "chalk": "^5.3.0",
@@ -86,6 +83,7 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.11.4",
+    "node-cron": "^3.0.3",
     "reflect-metadata": "^0.2.1",
     "typeorm": "^0.3.20"
   }

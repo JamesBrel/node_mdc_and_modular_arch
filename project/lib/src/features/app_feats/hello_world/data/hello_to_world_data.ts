@@ -1,7 +1,6 @@
 import {injectable} from "inversify";
-import {Success} from "../../../../../shared/results/result_success.js";
-import {Result} from "../../../../../shared/results/type.js";
-import {IHelloWorld} from "../interfaces/hello_to_world_inter.js";
+import {Success} from "../../../../shared/results/result_success.js";
+import {Result} from "../../../../shared/results/type.js";
 
 /**
  * @author Organisation_Name
@@ -12,7 +11,7 @@ import {IHelloWorld} from "../interfaces/hello_to_world_inter.js";
  * @email Developper_contact
  */
 @injectable()
-class HelloWorldImpl implements IHelloWorld {
+class HelloWorldData {
   /**
    * @name Function_Name
    * @description Describe the Function
@@ -20,9 +19,9 @@ class HelloWorldImpl implements IHelloWorld {
    * @return {data_type} Describe the return
    */
 
-  public sayTheHelloWorld(): Result<string, undefined> {
+  public sayTheHelloWorld(): Result<String, undefined> {
     return Success.result("Hello World !");
   }
 }
 
-export {HelloWorldImpl};
+export {HelloWorldData};

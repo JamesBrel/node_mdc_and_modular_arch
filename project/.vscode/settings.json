@@ -27,5 +27,6 @@
   "jest.runMode": "deferred",
   "jest.outputConfig": "neutral",
   "testing.openTesting": "neverOpen",
+  "testing.automaticallyOpenTestResults": "neverOpen",
 
 }

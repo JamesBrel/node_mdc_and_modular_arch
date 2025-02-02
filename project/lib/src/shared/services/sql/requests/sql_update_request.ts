@@ -3,22 +3,21 @@ import {DataSource, EntityTarget, ObjectLiteral} from "typeorm";
 class SqlUpdateRequest {
   public static async update(
     _database: DataSource,
-    _model: EntityTarget<ObjectLiteral>,
+    _entity: EntityTarget<ObjectLiteral>,
     _id: number,
     _properties: {},
     _populatePaths?: string
   ): Promise<{status: boolean; message: string; data?}> {
     return await _database
       .createQueryBuilder()
-      .update(_model)
+      .update(_entity)
       .set(_properties)
       .where("id = :id", {id: _id})
       .execute()
-      .then((data) => {
+      .then((_) => {
         return {
           status: true,
-          message: "Update Success",
-          data
+          message: "Update Success"
         };
       })
       .catch((_error: any) => {

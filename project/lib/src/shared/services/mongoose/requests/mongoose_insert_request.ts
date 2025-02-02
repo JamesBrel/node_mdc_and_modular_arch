@@ -4,14 +4,13 @@ class MongooseInsertRequest {
   public static async insert<T>(
     _model: Model<T>,
     properties: {}
-  ): Promise<{status: boolean; message: string; data?}> {
+  ): Promise<{status: boolean; message: string}> {
     return await _model
       .create(properties)
-      .then((data) => {
+      .then((_) => {
         return {
           status: true,
-          message: "Insertion Success",
-          data
+          message: "Insertion Success"
         };
       })
       .catch((_error: any) => {

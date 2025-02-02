@@ -1,22 +1,21 @@
 import {DataSource, EntityTarget, ObjectLiteral} from "typeorm";
 
 class SqlInsertRequest {
-  public static async insertOne(
+  public static insertOne(
     _database: DataSource,
-    _model: EntityTarget<ObjectLiteral>,
+    _entity: EntityTarget<ObjectLiteral>,
     _properties: {}
-  ): Promise<{status: boolean; message: string; data?}> {
-    return await _database
+  ): Promise<{status: boolean; message: string}> {
+    return _database
       .createQueryBuilder()
       .insert()
-      .into(_model)
+      .into(_entity)
       .values(_properties)
       .execute()
-      .then((data) => {
+      .then((_) => {
         return {
           status: true,
-          message: "Insertion Success",
-          data
+          message: "Insertion Success"
         };
       })
       .catch((_error: any) => {

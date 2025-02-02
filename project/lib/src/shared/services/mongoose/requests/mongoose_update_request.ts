@@ -6,15 +6,14 @@ class MongooseUpdateRequest {
     _id: string,
     properties: {},
     _populatePaths?: string
-  ): Promise<{status: boolean; message: string; data?}> {
+  ): Promise<{status: boolean; message: string}> {
     return await _model
       .findByIdAndUpdate(_id, properties)
       .populate(_populatePaths!)
-      .then((data) => {
+      .then((_) => {
         return {
           status: true,
-          message: "Update Success",
-          data
+          message: "Update Success"
         };
       })
       .catch((_error: any) => {
